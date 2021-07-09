@@ -2,13 +2,13 @@
 makeCacheMatrix <- function(x = matrix()) {
         ## This function creates a matrix object and then caches its inverse
         
-        makeCacheMatrix <- function(x = matrix()) { ## define the argument with default mode of "matrix"
-                inv <- NULL                             ## initialize inv as NULL; will hold value of matrix inverse 
+        makeCacheMatrix <- function(x = matrix()) { ## sets the arguement as a matrix
+                inv <- NULL                             ## sets the variable that will hold the inverse matrix as null
                 set <- function(y) {                    ## define the set function to assign new 
                         x <<- y                             ## value of matrix in parent environment
                         inv <<- NULL                        ## if there is a new matrix, reset inv to NULL
                 }
-                get <- function() x                     ## define the get fucntion - returns value of the matrix argument
+                get <- function() x                     ## make the get function which returns value of the matrix argument
                 
                 setinverse <- function(inverse) inv <<- inverse  ## assigns value of inv in parent environment
                 getinverse <- function() inv                     ## gets the value of inv where called
